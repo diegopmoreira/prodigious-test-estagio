@@ -1,0 +1,28 @@
+{
+  "name": "prodigious-test-estagio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegopmoreira/prodigious-test-estagio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegopmoreira/prodigious-test-estagio/issues"
+  },
+  "homepage": "https://github.com/diegopmoreira/prodigious-test-estagio#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-minify": "^2.1.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
