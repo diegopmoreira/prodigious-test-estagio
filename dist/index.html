@@ -38,7 +38,7 @@
         <span>Prodigious</span>
       </h1>
       <div class="gps_svg">
-        <?xml version="1.0" encoding="iso-8859-1"?>
+        <a href="#"><?xml version="1.0" encoding="iso-8859-1"?>
         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
           viewBox="0 0 491.582 491.582" style="enable-background:new 0 0 491.582 491.582;" xml:space="preserve">
@@ -51,7 +51,8 @@
             </g>
           </g>
         </svg>
-
+      </a>
+        <div id="map" style="display:none; position:absolute;"></div>
       </div>
       <nav class="menu">
         <div class="ham_svg">
@@ -128,23 +129,37 @@
     </header>
 
     <main class="content">
-      <div class="img_slider">
-        <img src="#" alt="">
+
+      <!--<canvas id="canvas"></canvas>-->
+      <div class="parent_logo">
+        <div class="logo_client"></div>
       </div>
+
       <div class="slider">
 
-        <div class="bullet_square">
-          <div class="bullet"></div>
-        </div>
-        <div class="bullet_square">
-            <div class="bullet"></div>
-          </div>
-          <div class="bullet_square">
-              <div class="bullet"></div>
-            </div>
-
       </div>
-
+      <ul class="text_slider">
+        
+          <li>
+              <a href="#">Slide 1</a>
+          </li>
+        
+        
+          <li>
+              <a href="#">  Slide 2</a>
+          </li>
+        
+       
+          <li>
+              <a href="#"> Slide 3</a>
+          </li>
+        
+        
+          <li>
+              <a href="#"> Slide 4</a>
+          </li>
+        
+      </ul>
       <div id="player"></div>
     </main>
   </div>
@@ -169,7 +184,12 @@
       magna aliquam malesuada.
     </p>
   </aside>
+  <div style="display:none;">
+    <img id="sprites" src="assets/img/spritebrands.png">
+  </div>
 </body>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6sZHul67VCNdBooQmGdwb1rNRd2jXRqI&callback=initMap"
+    async defer></script>
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="assets/js/scripts.js"></script>
 

@@ -4,16 +4,19 @@ $bg_content:#47a7cf;
   display:grid;
   background-color: $bg_content;
   grid-template-columns: 1fr;
-  grid-template-rows: 38.26fr 5.65fr 55.65fr;
+  grid-template-rows: 38.26fr 5.65fr 1fr 55.65fr;
   justify-items: center;
+  font-family: GothamBold;
   .slider{
     width: 88%;
     text-align:center;
+    white-space: nowrap;
+    align-self: center;
 
     .bullet_square{
       display:inline-block;
       padding:12.5px;
-      margin:-2.5px; //AVERIGUAR ESTE MARGIN
+      
       background:#ffffff;
       opacity: 0.5;
       box-sizing: border-box;
@@ -24,24 +27,83 @@ $bg_content:#47a7cf;
         background: #575757;
         opacity: 0.8;
         display:block;
-        width:5px;
-        height:5px;
-        border-radius: 50%;
-        
+        width:3px;
+        height:3px;
+        border-radius: 50%;  
+        box-sizing: content-box;  
+          
       }
+    }
+    .bullet_square:nth-child(4),.bullet_square:nth-child(11),
+    .bullet_square:nth-child(18),.bullet_square:nth-child(25){
+      padding: 8.5px;
+      a:focus{
+        .bullet{
+          background:#ffffff;
+          opacity:1;
+        }
+      }
+      
+      
+      .bullet{
+        width:11px;
+        height:11px;
+      }
+    }
+    .bullet_square:nth-child(27){
+      margin-left:7px;
+      margin-right: 13px;
+      
+    }
+    .bullet_square:nth-child(27),.bullet_square:nth-child(28){
+      padding: 3.5px;
+      width: 0px;
+      margin-bottom: 9px;
+      
     }
   }
   #player{
     width:80vw;
     height: 42.5vw;   
   }
-  .img_slider{
-    img{
-      display:block;
-      height: 250px;
-      width: 300px;
-      background-color:white;
-      margin-top:140px;
+ // #canvas{
+   // align-self:center;   
+    
+ // }
+  .parent_logo{
+    display:block; 
+    height:250px;
+    width:300px;
+    overflow:hidden;
+    align-self:center;  
+    .logo_client{
+      height: 100%;
+      width: 100%;
+      display: block;
+      background-position: 117px 98px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("../img/spritebrands.png");
+      transform: scale(3.4);
+    }
+  }
+  
+  .text_slider{
+    display:flex;
+    flex-wrap: wrap;
+    
+    li + li {
+      margin-left: 160px;      
+    }
+    li{
+      color:#575757;
+      a{
+        text-decoration:none;
+        &:focus{
+          color:white;
+        }
+      }
+      
     }
   }
 }
