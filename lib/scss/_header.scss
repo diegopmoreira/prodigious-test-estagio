@@ -1,10 +1,69 @@
-.header{
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  
-  
-  
+$bg_header: #ececec;
 
+.header{
+  font-family: GothamBook;
+  display:grid;
+  grid-template-columns: 10.6fr 66.6fr 8fr 12fr;
+  background-color: linear-gradient($bg_header,#ffffff);
+  margin-bottom: 3px;
+  align-items: center;
+  
+  h1{
+    color:#575757;
+    font-size: 28px;
+    text-transform: uppercase;
+    &::before{
+      content:"";
+      padding: 2px;
+      width: 80px;
+      background-color: #575757;
+      display: block;
+      margin-bottom:10px;
+      
+    }
+    &::after{
+      content:"";
+    
+      padding: 2px;
+      width: 80px;
+      background-color: #575757;
+      display: block;
+      margin-top:10px;
+      
+    }
+    span{
+      font-family: GothamBold;
+    }   
+    
+    
+  }
+  .back_svg{
+   
+    height:30px;
+    svg{
+      max-height: 100%;
+      margin-left: 30px;
+      color: #8a8e8d;
+    }
+  }
+
+  .ham_svg{
+    height: 35px;
+    svg{
+      max-height: 100%;
+      
+    }
+    text-align: center;
+  }
+  .gps_svg{
+    height: 40px;
+    svg{
+      max-height: 100%;
+    }
+    text-align: center;
+  }
+
+  .menu ul{display:none;}
   
   
 }

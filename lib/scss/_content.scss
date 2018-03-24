@@ -1,4 +1,47 @@
+$bg_content:#47a7cf;
+
 .content{
- 
-  
+  display:grid;
+  background-color: $bg_content;
+  grid-template-columns: 1fr;
+  grid-template-rows: 38.26fr 5.65fr 55.65fr;
+  justify-items: center;
+  .slider{
+    width: 88%;
+    text-align:center;
+
+    .bullet_square{
+      display:inline-block;
+      padding:12.5px;
+      margin:-2.5px; //AVERIGUAR ESTE MARGIN
+      background:#ffffff;
+      opacity: 0.5;
+      box-sizing: border-box;
+
+      width:30px;
+     
+      .bullet{
+        background: #575757;
+        opacity: 0.8;
+        display:block;
+        width:5px;
+        height:5px;
+        border-radius: 50%;
+        
+      }
+    }
+  }
+  #player{
+    width:80vw;
+    height: 42.5vw;   
+  }
+  .img_slider{
+    img{
+      display:block;
+      height: 250px;
+      width: 300px;
+      background-color:white;
+      margin-top:140px;
+    }
+  }
 }
