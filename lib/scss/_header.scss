@@ -61,6 +61,13 @@ $bg_header: #ececec;
       max-height: 100%;
     }
     text-align: center;
+    #geo{
+      display:none; 
+      position:absolute; 
+      width:100px; 
+      height:70px;
+      background-color:whitesmoke;
+    }
   }
 
   .menu ul{display:none;}

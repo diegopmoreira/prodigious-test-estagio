@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  
   <title>Teste Prodigious</title>
+  
   <script src="../node_modules/jquery/dist/jquery.js"></script>
 </head>
 
@@ -52,10 +54,12 @@
           </g>
         </svg>
       </a>
-        <div id="map" style="display:none; position:absolute;"></div>
+        <div id="geo"></div>
       </div>
       <nav class="menu">
+        
         <div class="ham_svg">
+            <a href="#">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 27">
             <defs>
               <style>
@@ -77,7 +81,9 @@
               </g>
             </g>
           </svg>
+        </a>
         </div>
+      
         <ul>
           <li>
             <a href="#">Bradesco</a>
@@ -165,6 +171,7 @@
   </div>
 
   <aside class="modal">
+    <div class="infos">
     <header>Modal que abre com o cliente</header>
     <div>
       <svg style="height:1px;"></svg>
@@ -183,14 +190,14 @@
       id aliquam leo, et fringilla ante. Aenean consectetur rhoncus dui, at dictum odio placerat eget. Proin id tellus eu
       magna aliquam malesuada.
     </p>
+  </div>
+  
   </aside>
   <div style="display:none;">
     <img id="sprites" src="assets/img/spritebrands.png">
   </div>
 </body>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6sZHul67VCNdBooQmGdwb1rNRd2jXRqI&callback=initMap"
-    async defer></script>
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+
 <script src="assets/js/scripts.js"></script>
 
 </html>
