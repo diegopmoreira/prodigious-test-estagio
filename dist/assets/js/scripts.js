@@ -146,6 +146,21 @@ ctx.drawImage(image, clients[x].posX_start, clients[x].posY_start, clients[x].wi
     },4000);
   });
 
+  $('.ham_svg a').click(function(){
+    $('.menu_clients').slideToggle();
+    
+  });
+
+  $('.menu_clients li a').click(function(){
+    $('.menu_clients').slideToggle();
+    $('.modal').fadeIn();
+    var target = $(this).html();
+    if($('.modal_clients li').attr("data-target") === target){
+      $('.modal_clients li').fadeIn();
+      console.log(target);
+    }
+  });
+
 });
 
 
