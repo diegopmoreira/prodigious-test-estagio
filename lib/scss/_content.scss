@@ -1,6 +1,7 @@
 $bg_content:#47a7cf;
 
 .content{
+  
   display:grid;
   background-color: $bg_content;
   grid-template-columns: 1fr;
@@ -8,20 +9,19 @@ $bg_content:#47a7cf;
   justify-items: center;
   font-family: GothamBold;
   .slider{
-    width: 88%;
-    text-align:center;
-    white-space: nowrap;
+    
+    text-align:center;    
     align-self: center;
-
+    white-space: nowrap;
     .bullet_square{
       display:inline-block;
       padding:12.5px;
-      
+      width: 0px;
       background:rgba(255,255,255,0.5);
       
       box-sizing: border-box;
 
-      width:30px;
+      
      
       .bullet{
         background: #575757;
@@ -89,7 +89,7 @@ $bg_content:#47a7cf;
     flex-wrap: wrap;
     
     li + li {
-      margin-left: 160px;      
+      margin-left: 110px;      
     }
     li{
       color:#575757;
@@ -108,5 +108,13 @@ $bg_content:#47a7cf;
       }
       
     }
+  }
+  
+    
+  }
+
+@media screen and (max-width: 690px){
+  .bullet_square:not(:nth-child(4),:nth-child(11)){
+    margin: 100px;
   }
 }

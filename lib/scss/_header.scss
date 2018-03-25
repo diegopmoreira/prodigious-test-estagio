@@ -1,19 +1,23 @@
 $bg_header: #ececec;
-
+header{
+  width:100vw;
+}
 .header{
   font-family: GothamBook;
   
   
   display:grid;
-  grid-template-columns: 10.6fr minmax(450px, 66.6fr) 8fr 12fr;
-  background-color: linear-gradient(to bottom,$bg_header,#ffffff);
+  //grid-template-columns: 5.3fr  33.3fr 4fr 6fr;
+  grid-template-columns: 5.3fr  33.3fr 4fr 6fr;
+  background-color: linear-gradient($bg_header,#ffffff);
   margin-bottom: 3px;
   align-items: center; 
-  
+  width:100%;
   h1{
     color:#575757;
     font-size: 28px;
     text-transform: uppercase;
+    white-space: nowrap;
     &::before{
       content:"";
       padding: 2px;
