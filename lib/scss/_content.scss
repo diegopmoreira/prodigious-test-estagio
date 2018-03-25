@@ -17,8 +17,8 @@ $bg_content:#47a7cf;
       display:inline-block;
       padding:12.5px;
       
-      background:#ffffff;
-      opacity: 0.5;
+      background:rgba(255,255,255,0.5);
+      
       box-sizing: border-box;
 
       width:30px;
@@ -37,12 +37,7 @@ $bg_content:#47a7cf;
     .bullet_square:nth-child(4),.bullet_square:nth-child(11),
     .bullet_square:nth-child(18),.bullet_square:nth-child(25){
       padding: 8.5px;
-      a:focus{
-        .bullet{
-          background:#ffffff;
-          opacity:1;
-        }
-      }
+      
       
       
       .bullet{
@@ -85,6 +80,7 @@ $bg_content:#47a7cf;
       background-size: cover;
       background-image: url("../img/spritebrands.png");
       transform: scale(3.4);
+      transition: 0.5s linear;
     }
   }
   
@@ -99,9 +95,16 @@ $bg_content:#47a7cf;
       color:#575757;
       a{
         text-decoration:none;
+        &:visited{
+          color:#575757;
+        }
         &:focus{
           color:white;
         }
+        &:hover{
+          color:white;
+        }
+        
       }
       
     }

@@ -10,6 +10,7 @@
   background: #ffffff;
   font-family:GothamBook;
   margin:0;
+  padding:0;
   
   
  
@@ -20,17 +21,18 @@
     box-sizing: bordex-box;
     
     li {
-     
+      margin-left:30px;
       display:none;
       h2{
+        
       
       color:#47a7cf;
         &::after{
           content:"";
-        position:relative;
+          
           padding: 0.5px;
-          width:90vw;
-          text-align:center;
+          width:95%;
+          
           background-color: #575757;
           display: block;
           margin-top:65px;
@@ -38,14 +40,14 @@
         }      
       }
       p{
-        
+        margin-right: 60px;
       }
     }
 
 
   
   svg{
-    
+    margin-right:65px;
     width:50px;
     height:50px;
     grid-column: 2;
