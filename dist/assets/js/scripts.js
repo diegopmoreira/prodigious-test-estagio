@@ -113,7 +113,7 @@ ctx.drawImage(image, clients[x].posX_start, clients[x].posY_start, clients[x].wi
 
     $('.parent_logo .logo_client').css("background-position-x", "117px");
     j=4;
-    k=1;
+    k=2;
     $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
     $('.slider .bullet_square:not(:nth-child('+j+')) .bullet').css('background','#575757');
     $('.text_slider li:nth-child(1) a').css('color','white');
@@ -123,29 +123,29 @@ ctx.drawImage(image, clients[x].posX_start, clients[x].posY_start, clients[x].wi
 
     $('.parent_logo .logo_client').css("background-position-x", "-11px");
     j=11;
-    k=2;
+    k=3;
     $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
     $('.slider .bullet_square:not(:nth-child('+j+')) .bullet').css('background','#575757');
     $('.text_slider li:nth-child(2) a').css('color','white');
-    $('.text_slider li:not(:nth-child(1)) a').css('color','#575757');
+    $('.text_slider li:not(:nth-child(2)) a').css('color','#575757');
   });
   $(".bullet_square:nth-child(18) ").click(function () {
     $('.parent_logo .logo_client').css("background-position-x", "-139px");
     j=18;
-    k=3;
+    k=4;
     $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
     $('.slider .bullet_square:not(:nth-child('+j+')) .bullet').css('background','#575757');
     $('.text_slider li:nth-child(3) a').css('color','white');
-    $('.text_slider li:not(:nth-child(1)) a').css('color','#575757');
+    $('.text_slider li:not(:nth-child(3)) a').css('color','#575757');
   });
   $(".bullet_square:nth-child(25) ").click(function () {
     $('.parent_logo .logo_client').css("background-position-x", "-267px");
     j=25;
-    k=4;
+    k=5;
     $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
     $('.slider .bullet_square:not(:nth-child('+j+')) .bullet').css('background','#575757');
     $('.text_slider li:nth-child(4) a').css('color','white');
-    $('.text_slider li:not(:nth-child(1)) a').css('color','#575757');
+    $('.text_slider li:not(:nth-child(4)) a').css('color','#575757');
   });
 
   $(".text_slider li:nth-child(1)").click(function () {
@@ -232,6 +232,7 @@ ctx.drawImage(image, clients[x].posX_start, clients[x].posY_start, clients[x].wi
 
   setInterval(function(){
     j++;
+    
     $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
     
     if(j == 4 || j == 11 || j == 18 || j == 25){
