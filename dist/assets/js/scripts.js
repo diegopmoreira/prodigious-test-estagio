@@ -158,7 +158,7 @@ ctx.drawImage(image, clients[x].posX_start, clients[x].posY_start, clients[x].wi
     $('.menu_clients').slideToggle();
     $('.modal').fadeIn();
     var target = $(this).html();
-    console.log(target);
+    
     $('.modal [data-target="' + target + '"]').show();
   });
 
