@@ -22,15 +22,15 @@ Em termos gerais:
 4. Foco em semântica, acessibilidade e desempenho.
 
 
-##Dependências
+## Dependências
 	Node.Js
 
 
-##Como iniciar
+## Como iniciar
 	npm i && gulp
 
 
-##GitHub Pages
+## GitHub Pages
 	https://diegopmoreira.github.io/prodigious-test-estagio/dist/index.html
 
 
