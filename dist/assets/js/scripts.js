@@ -139,6 +139,7 @@ ctx.drawImage(image, clients[x].posX_start, clients[x].posY_start, clients[x].wi
   });
 
   $('.gps_svg a').click(function () {
+    $('#geo').empty();
     $('#geo').fadeIn();
     $('#geo').append('<span>' + city + ', ' + state + '</span>');
     setTimeout(function () {
