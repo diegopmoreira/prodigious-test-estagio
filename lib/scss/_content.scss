@@ -86,13 +86,16 @@ $bg_content:#47a7cf;
   
   .text_slider{
     display:flex;
-    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 0px;
     
     li + li {
       margin-left: 110px;      
     }
     li{
       color:#575757;
+      white-space: nowrap;
       a{
         text-decoration:none;
         &:visited{
@@ -114,7 +117,26 @@ $bg_content:#47a7cf;
   }
 
 @media screen and (max-width: 690px){
-  .bullet_square:not(:nth-child(4),:nth-child(11)){
-    margin: 100px;
+ .content .slider .bullet_square{
+    padding:7.5px;
+    
+
   }
+  .content .slider .bullet_square:nth-child(4), .content .slider .bullet_square:nth-child(11),
+  .content .slider .bullet_square:nth-child(18),.content .slider .bullet_square:nth-child(25){
+      padding: 4.5px;
+      padding-right: 7px;
+      .bullet{
+        
+        width: 9px;
+        height: 9px;
+      }
+        
+  
+  }
+  
+  .content .text_slider li+li {
+    margin-left: 50px;
+}
+  
 }
