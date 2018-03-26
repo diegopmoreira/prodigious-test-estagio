@@ -3,11 +3,8 @@ header{
   width:100%;
 }
 .header{
-  font-family: GothamBook;
-  
-  
-  display:grid;
-  //grid-template-columns: 5.3fr  33.3fr 4fr 6fr;
+  font-family: GothamBook;  
+  display:grid;  
   grid-template-columns: 5.3fr  33.3fr 4fr 6fr;
   background-color: linear-gradient($bg_header,#ffffff);
   margin-bottom: 3px;
@@ -24,27 +21,26 @@ header{
       width: 80px;
       background-color: #575757;
       display: block;
-      margin-bottom:10px;
-      
+      margin-bottom:10px;      
+
     }
     &::after{
-      content:"";
-    
+      content:"";    
+
       padding: 2px;
       width: 80px;
       background-color: #575757;
       display: block;
       margin-top:10px;
-      
+
     }
     span{
       font-family: GothamBold;
-    }   
-    
-    
+    }    
   }
-  .back_svg{
-   
+
+
+  .back_svg{   
     height:30px;
     svg{
       max-height: 100%;
@@ -74,7 +70,7 @@ header{
       width:80px; 
       height:100px;
       background-color:whitesmoke;
-      z-index:103;
+      z-index:102;
     }
   }
 
@@ -107,7 +103,7 @@ header{
     transition: all .25s linear;
       &:hover{
         color: #333;
-      background-color: #47a7cf;
+        background-color: #47a7cf;
       }
     }
     .menu{
@@ -118,21 +114,19 @@ header{
     }
     h1::before{
       background-color:#47a7cf;
-  }
-  h1::after{
-    background-color:#47a7cf;
-}
-  }
-  
-  
+    }
+    h1::after{
+      background-color:#47a7cf;
+    } 
+  }  
 }
 
 @media screen and (max-width: 690px){
   
- .header h1{
-   font-size: 18px;
-   margin-top:20px;
- }
+  .header h1{
+    font-size: 18px;
+    margin-top:20px;
+  }
  }
 
 

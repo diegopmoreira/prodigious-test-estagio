@@ -17,11 +17,8 @@ $bg_content:#47a7cf;
       display:inline-block;
       padding:12.5px;
       width: 0px;
-      background:rgba(255,255,255,0.5);
-      
+      background:rgba(255,255,255,0.5);      
       box-sizing: border-box;
-
-      
      
       .bullet{
         background: #575757;
@@ -36,9 +33,7 @@ $bg_content:#47a7cf;
     }
     .bullet_square:nth-child(4),.bullet_square:nth-child(11),
     .bullet_square:nth-child(18),.bullet_square:nth-child(25){
-      padding: 8.5px;
-      
-      
+      padding: 8.5px;          
       
       .bullet{
         width:11px;
@@ -106,74 +101,64 @@ $bg_content:#47a7cf;
         }
         &:hover{
           color:white;
-        }
-        
-      }
-      
+        }        
+      }      
     }
   }
   
     
-  }
+}
 
 @media screen and (max-width: 690px){
  .content .slider .bullet_square{
-    padding:7.5px;
-    
-
+    padding:7.5px; 
   }
   .content .slider .bullet_square:nth-child(4), .content .slider .bullet_square:nth-child(11),
   .content .slider .bullet_square:nth-child(18),.content .slider .bullet_square:nth-child(25){
       padding: 4.5px;
       padding-right: 7px;
-      .bullet{
-        
+      .bullet{        
         width: 9px;
         height: 9px;
-      }
-        
+      }        
   
   }
   
   .content .text_slider li+li {
     margin-left: 50px;
-}
-.content .slider .bullet_square:nth-child(27),.content .slider .bullet_square:nth-child(28){
-  padding: 3.5px;
-  width: 0px;
-  margin-bottom: 4px;
-  
-}
+  }
+  .content .slider .bullet_square:nth-child(27),.content .slider .bullet_square:nth-child(28){
+    padding: 3.5px;
+    width: 0px;
+    margin-bottom: 4px;
+    
+  }
 
 }
 
 @media screen and (max-width: 480px){
   .content .slider .bullet_square{
-     padding:6px;
-     
+     padding:6px;     
  
    }
    .content .slider .bullet_square:nth-child(4), .content .slider .bullet_square:nth-child(11),
    .content .slider .bullet_square:nth-child(18),.content .slider .bullet_square:nth-child(25){
        padding: 4.5px;
        padding-right: 7px;
-       .bullet{
-         
+       .bullet{         
          width: 6px;
          height: 6px;
-       }
-         
-   
-   }
+      }        
+    }
    
    .content .text_slider li+li {
      margin-left: 30px;
- }
+    }
  .content .slider .bullet_square:nth-child(27),.content .slider .bullet_square:nth-child(28){
   padding: 3.5px;
   width: 0px;
   margin-bottom: 2px;
   
-}
+  }
  
- }
+}
