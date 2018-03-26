@@ -62,10 +62,15 @@ geo();
 
 
 $(document).ready(function () {
- var j=0;
- var k =1;
+  var j = 0; //variavel para contar os bullets
+  var k = 1; //variavel para contar os text_slides
 
-  /*let canvas = document.getElementById('canvas');
+
+
+  /*Aqui seria utilizado canvas para lidar com as imagens no carousel
+  entretanto foi preferivel manter o uso de background ao inves de recorte com canvas
+  
+  let canvas = document.getElementById('canvas');
   let ctx = canvas.getContext('2d');
   let image = document.getElementById('sprites');
   var x =0;
@@ -102,6 +107,7 @@ $(document).ready(function () {
 ctx.drawImage(image, clients[x].posX_start, clients[x].posY_start, clients[x].width, clients[x].height, 0, 0, clients[x].width, clients[x].height);
 */
   for (var i = 0; i < 28; i++) {
+    //repeticao que insere dinamicamente as bullets/dots para evitar ter que criar 28 tags no html
     if (i == 3 || i == 10 || i == 17 || i == 24) {
       $('.slider').append('<div class="bullet_square"><a href="#"><div class="bullet"></div></a></div>')
     } else {
@@ -109,85 +115,91 @@ ctx.drawImage(image, clients[x].posX_start, clients[x].posY_start, clients[x].wi
     }
   }
 
+  //estas 8 funcoes abaixo fazem o papel de estilizar e animar o caroulse e sliders
   $(".bullet_square:nth-child(4)").click(function (e) {
-e.preventDefault();
+    e.preventDefault();
     $('.parent_logo .logo_client').css("background-position-x", "117px");
-    j=4;
-    k=2;
-    $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
-    $('.slider .bullet_square:not(:nth-child('+j+')) .bullet').css('background','#575757');
-    $('.text_slider li:nth-child(1) a').css('color','white');
-    $('.text_slider li:not(:nth-child(1)) a').css('color','#575757');
+    j = 4;
+    k = 2;
+    $('.slider .bullet_square:nth-child(' + j + ') .bullet').css('background', 'white');
+    $('.slider .bullet_square:not(:nth-child(' + j + ')) .bullet').css('background', '#575757');
+    $('.text_slider li:nth-child(1) a').css('color', 'white');
+    $('.text_slider li:not(:nth-child(1)) a').css('color', '#575757');
   });
   $(".bullet_square:nth-child(11) ").click(function (e) {
     e.preventDefault();
     $('.parent_logo .logo_client').css("background-position-x", "-11px");
-    j=11;
-    k=3;
-    $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
-    $('.slider .bullet_square:not(:nth-child('+j+')) .bullet').css('background','#575757');
-    $('.text_slider li:nth-child(2) a').css('color','white');
-    $('.text_slider li:not(:nth-child(2)) a').css('color','#575757');
+    j = 11;
+    k = 3;
+    $('.slider .bullet_square:nth-child(' + j + ') .bullet').css('background', 'white');
+    $('.slider .bullet_square:not(:nth-child(' + j + ')) .bullet').css('background', '#575757');
+    $('.text_slider li:nth-child(2) a').css('color', 'white');
+    $('.text_slider li:not(:nth-child(2)) a').css('color', '#575757');
   });
   $(".bullet_square:nth-child(18) ").click(function (e) {
     e.preventDefault();
     $('.parent_logo .logo_client').css("background-position-x", "-139px");
-    j=18;
-    k=4;
-    $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
-    $('.slider .bullet_square:not(:nth-child('+j+')) .bullet').css('background','#575757');
-    $('.text_slider li:nth-child(3) a').css('color','white');
-    $('.text_slider li:not(:nth-child(3)) a').css('color','#575757');
+    j = 18;
+    k = 4;
+    $('.slider .bullet_square:nth-child(' + j + ') .bullet').css('background', 'white');
+    $('.slider .bullet_square:not(:nth-child(' + j + ')) .bullet').css('background', '#575757');
+    $('.text_slider li:nth-child(3) a').css('color', 'white');
+    $('.text_slider li:not(:nth-child(3)) a').css('color', '#575757');
   });
   $(".bullet_square:nth-child(25) ").click(function (e) {
     e.preventDefault();
     $('.parent_logo .logo_client').css("background-position-x", "-267px");
-    j=25;
-    k=5;
-    $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
-    $('.slider .bullet_square:not(:nth-child('+j+')) .bullet').css('background','#575757');
-    $('.text_slider li:nth-child(4) a').css('color','white');
-    $('.text_slider li:not(:nth-child(4)) a').css('color','#575757');
+    j = 25;
+    k = 5;
+    $('.slider .bullet_square:nth-child(' + j + ') .bullet').css('background', 'white');
+    $('.slider .bullet_square:not(:nth-child(' + j + ')) .bullet').css('background', '#575757');
+    $('.text_slider li:nth-child(4) a').css('color', 'white');
+    $('.text_slider li:not(:nth-child(4)) a').css('color', '#575757');
   });
 
   $(".text_slider li:nth-child(1)").click(function (e) {
     e.preventDefault();
 
     $('.parent_logo .logo_client').css("background-position-x", "117px");
-    $('.text_slider li:nth-child(1) a').css('color','white');
-    $('.text_slider li:not(:nth-child(1)) a').css('color','#575757');
-    j=4;
-    $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
-    $('.slider .bullet_square:not(:nth-child('+j+')) .bullet').css('background','#575757');
+    $('.text_slider li:nth-child(1) a').css('color', 'white');
+    $('.text_slider li:not(:nth-child(1)) a').css('color', '#575757');
+    j = 4;
+    $('.slider .bullet_square:nth-child(' + j + ') .bullet').css('background', 'white');
+    $('.slider .bullet_square:not(:nth-child(' + j + ')) .bullet').css('background', '#575757');
   });
   $(".text_slider li:nth-child(2) ").click(function (e) {
     e.preventDefault();
     $('.parent_logo .logo_client').css("background-position-x", "-11px");
-    $('.text_slider li:nth-child(2) a').css('color','white');
-    $('.text_slider li:not(:nth-child(2)) a').css('color','#575757');
-    j=11;
-    $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
-    $('.slider .bullet_square:not(:nth-child('+j+')) .bullet').css('background','#575757');
+    $('.text_slider li:nth-child(2) a').css('color', 'white');
+    $('.text_slider li:not(:nth-child(2)) a').css('color', '#575757');
+    j = 11;
+    $('.slider .bullet_square:nth-child(' + j + ') .bullet').css('background', 'white');
+    $('.slider .bullet_square:not(:nth-child(' + j + ')) .bullet').css('background', '#575757');
   });
   $(".text_slider li:nth-child(3) ").click(function (e) {
     e.preventDefault();
     $('.parent_logo .logo_client').css("background-position-x", "-139px");
-    $('.text_slider li:nth-child(3) a').css('color','white');
-    $('.text_slider li:not(:nth-child(3)) a').css('color','#575757');
-    j=18;
-    $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
-    $('.slider .bullet_square:not(:nth-child('+j+')) .bullet').css('background','#575757');
+    $('.text_slider li:nth-child(3) a').css('color', 'white');
+    $('.text_slider li:not(:nth-child(3)) a').css('color', '#575757');
+    j = 18;
+    $('.slider .bullet_square:nth-child(' + j + ') .bullet').css('background', 'white');
+    $('.slider .bullet_square:not(:nth-child(' + j + ')) .bullet').css('background', '#575757');
   });
   $(".text_slider li:nth-child(4)").click(function (e) {
     e.preventDefault();
     $('.parent_logo .logo_client').css("background-position-x", "-267px");
-    $('.text_slider li:nth-child(4) a').css('color','white');
-    $('.text_slider li:not(:nth-child(4)) a').css('color','#575757');
-    j=25;
-    $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
-    $('.slider .bullet_square:not(:nth-child('+j+')) .bullet').css('background','#575757');
+    $('.text_slider li:nth-child(4) a').css('color', 'white');
+    $('.text_slider li:not(:nth-child(4)) a').css('color', '#575757');
+    j = 25;
+    $('.slider .bullet_square:nth-child(' + j + ') .bullet').css('background', 'white');
+    $('.slider .bullet_square:not(:nth-child(' + j + ')) .bullet').css('background', '#575757');
   });
 
+
+
+
+
+  //mostrar cidade e estado
   $('.gps_svg a').click(function () {
     $('#geo').empty();
     $('#geo').fadeIn();
@@ -203,20 +215,22 @@ e.preventDefault();
 
   });
 
+  //ao clicar no cliente na lista do menu hamburger abre a modal com suas respectivas informacoes
   $('.menu_clients li a').click(function () {
     $('.modal_clients li').hide();
     $('.menu_clients').slideToggle();
     $('.modal').fadeIn();
-    $('body').css('overflow','hidden');
+    $('body').css('overflow', 'hidden');
     var target = $(this).html();
-    
+
     $('.modal [data-target="' + target + '"]').show();
   });
 
+//ao clicar no logo no slider abre a modal com suas respectivas informacoes
   $('.parent_logo a').click(function () {
     $('.modal_clients li').hide();
     $('.modal').fadeIn();
-    $('body').css('overflow','hidden');
+    $('body').css('overflow', 'hidden');
     var target;
     if ($('.logo_client').css('background-position-x') == "117px") {
       target = "Bradesco";
@@ -230,45 +244,47 @@ e.preventDefault();
     $('.modal [data-target="' + target + '"]').fadeIn();
 
   });
-
+//adiciona o scroll de volta a pagina ao fechar a modal
   $('.modal_clients a').click(function () {
     $('.modal').fadeOut();
-    $('body').css('overflow','visible');
+    $('body').css('overflow', 'visible');
   });
 
-  setInterval(function(){
+
+  //este intervalo trabalha como contador no slider/carousel e estilizando adequadamente
+  setInterval(function () {
     j++;
-    
-    $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
-    
-    if(j == 4 || j == 11 || j == 18 || j == 25){
-      $('.slider .bullet_square:lt('+j+') .bullet').css('background','#575757');
-      $('.slider .bullet_square:nth-child('+j+') .bullet').css('background','white');
-      $('.text_slider li:nth-child('+k+') a').css('color','white');
-      $('.text_slider li:not(:nth-child('+k+')) a').css('color','#575757');
+
+    $('.slider .bullet_square:nth-child(' + j + ') .bullet').css('background', 'white');
+
+    if (j == 4 || j == 11 || j == 18 || j == 25) {
+      $('.slider .bullet_square:lt(' + j + ') .bullet').css('background', '#575757');
+      $('.slider .bullet_square:nth-child(' + j + ') .bullet').css('background', 'white');
+      $('.text_slider li:nth-child(' + k + ') a').css('color', 'white');
+      $('.text_slider li:not(:nth-child(' + k + ')) a').css('color', '#575757');
       k++;
-      
-      if(j == 4){
-        $('.logo_client').css('background-position-x','117px');
-      } else if(j == 11){
-        $('.logo_client').css('background-position-x','-11px');
-        
-      }else if(j == 18){
-        $('.logo_client').css('background-position-x','-139px');
-      }else if(j == 25){
-        $('.logo_client').css('background-position-x','-267px');
+
+      if (j == 4) {
+        $('.logo_client').css('background-position-x', '117px');
+      } else if (j == 11) {
+        $('.logo_client').css('background-position-x', '-11px');
+
+      } else if (j == 18) {
+        $('.logo_client').css('background-position-x', '-139px');
+      } else if (j == 25) {
+        $('.logo_client').css('background-position-x', '-267px');
       }
     }
-    
-    if(j == 29){
-      
-      $('.text_slider li:not(:nth-child('+k+')) a').css('color','#575757');
-      k=1;
-      
-      $('.slider .bullet_square .bullet').css('background','#575757');
-      j=0;
+
+    if (j == 29) {
+
+      $('.text_slider li:not(:nth-child(' + k + ')) a').css('color', '#575757');
+      k = 1;
+
+      $('.slider .bullet_square .bullet').css('background', '#575757');
+      j = 0;
     }
-  },500);
+  }, 500);
 
 });
 

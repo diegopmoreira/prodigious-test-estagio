@@ -108,7 +108,8 @@ $bg_content:#47a7cf;
   
     
 }
-
+//foi necessário utilizar de media query afinal o slider estava estourando
+//o viewport causando deformacoes
 @media screen and (max-width: 690px){
  .content .slider .bullet_square{
     padding:7.5px; 
